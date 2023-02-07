@@ -37,7 +37,12 @@ EC2
 
 - Elastic IPs remain the same4 after redeploying unlike public IPs
 
-
+--------
+MODULES
+--------
+- To access any atribute or value for anything we've created inside a module we have
+  to create an output
+  
 -----------
 OTHER NOTES
 -----------
@@ -49,4 +54,3 @@ OTHER NOTES
  a list comprehension to extract the CIDR blocks from  'data.aws_subnet.redshift_ingress' 
  data source and assign them to the 'cidr_blocks' variable
 
-- 
