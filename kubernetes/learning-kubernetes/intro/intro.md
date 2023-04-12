@@ -89,3 +89,6 @@ Each pod has:
 `kubectl port-forward <pod> <local-port>:<remote-port>`: Forward a local port to a port on a pod, e.g., kubectl port-forward my-pod 8080:80.
 - Get API Resources:
 `kubectl api-resources`: List all the supported API resources.
+
+## ConfigMap
+- ConfigMaps provide a convenient way to manage configuration data separately from application code, making it easier to maintain and update configurations without having to rebuild and   redeploy containers. 
