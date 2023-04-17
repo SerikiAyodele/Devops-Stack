@@ -4,12 +4,12 @@ BASICS ...
 * Github is a servuce that hosts git repositories in the cloud and makesnit easy to collaborate with other people
 
 BASIC COMMANDS
-* ls                      #list                 
+* ls                      #list the contents or file of a folder                 
 * mkdir plants            #creates a directory called plants
-* cd 
-* touch
-* rm
-* rm -rf
+* cd                      #change directory
+* touch                   #create a new file
+* rm                      #remove a file
+* rm -rf                  #remove a directory
 
 
 
