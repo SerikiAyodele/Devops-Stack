@@ -11,5 +11,7 @@ BASIC COMMANDS
 * rm                      #remove a file
 * rm -rf                  #remove a directory
 
+NOTES
+* A git repo is a workspace that tracks and manages files within a folder
 
 
