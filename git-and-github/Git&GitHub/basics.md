@@ -19,8 +19,11 @@ NOTES
 * Each commit is like a snapshot or a checkpoint at a particular time, of your repo
 * Working directory: where we actually work on our project
 * Staging area: Where we add our changes to, before we make a commit
+* Atomic commit: when possible, a commit should encompass a single feature, change or fix.
+  This makes it easy to roll back changes later
 
-GIT IGNORE
+* git log --abbrev-commit: will give you shorter info on the logs
+* git log --pretty=oneline: is easier to read
 
 WRITING ATOMIC COMMITS
 
