@@ -16,4 +16,14 @@ NOTES
 * Git status: gives information on the current status of a git repository and it's content 
 * Git init: to create a new git repository- creates a hidden .git folder
   * rm -rf .git: to remove a .git folder
-* Each commit is like a snapshot or a checkpoint at a particular time, of your repob 
+* Each commit is like a snapshot or a checkpoint at a particular time, of your repo
+* Working directory: where we actually work on our project
+* Staging area: Where we add our changes to, before we make a commit
+
+GIT IGNORE
+
+WRITING ATOMIC COMMITS
+
+NAVIGATING THE GIT DOCUMENTATION
+
+AMENDING COMMITS 
