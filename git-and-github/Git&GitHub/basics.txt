@@ -30,10 +30,12 @@ COMMITS
   This makes it easy to roll back changes later
 * git log --abbrev-commit: will give you shorter info on the logs
 * git log --pretty=oneline: is easier to read
+
   AMENDING COMMITS
   ================
   * Allows us to update just the previous commit using the --amend option
   * you can use this to chnage the comment meassage or add a new file to the previous commit 
+  
   IGNORING FILES 
   ==============
   * Files to ignore include:
