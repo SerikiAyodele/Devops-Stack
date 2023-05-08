@@ -45,3 +45,5 @@ COMMITS
     folderName/: will ignore an entire directory
     *.log: will ignore any files with the .log extension
 
+
+
