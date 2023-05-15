@@ -1,0 +1,5 @@
+INTRODUCTION TO YAML
+--------------------
+* YAML is a light-weight, human-readable, data-serialization language.It is primarily designed to make 
+  the format easy to read while including advanced features.
+* YAML stands for "YAML Ain't Markup Language" 
