@@ -24,13 +24,25 @@ An open source system for automating deployment, scaling and management of conta
 
 ## Kubernetes Architecture
 Responsibilities in a kubernetes cluster are divided between the main node and the worker node
-- Operators:They empower kubernetes to automate the entire lifecycle of complex application,
-            making them self-healing and self-managing.
-- Controllers:Compares the actual state of cluster to the desired state, and attempts to make
-              the actual state match the desired state.
-- ReplicaSet:They are designed to maintain a level of scalability and availability, for an
-             application or microservice by creating and managing multiple identical instances
-             of the same pod.
+- Operators:They empower kubernetes to automate the entire lifecycle of complex application, making them self-healing and self-managing.
+- Controllers:Compares the actual state of cluster to the desired state, and attempts to make the actual state match the desired state.
+- ReplicaSet:They are designed to maintain a level of scalability and availability, for anapplication or microservice by creating and 
+  managing multiple identical instances of the same pod.
 - DaemonSet:Will make sure a single pod is deployed in every node.
-- StatefulSet:Used to deploy pods in a particular order, a next pod is deployed only if the previous
-              is reports a ready status.
+- StatefulSet:Used to deploy pods in a particular order, a next pod is deployed only if the previousis reports a ready status.
+
+
+- kube-apiserver:Responsible for exposing the Kubernetes API, through which users and components can interact with the cluster.
+- kube-scheduler:Determines what node a pod should be deployed to.
+- etcd Database:Used for managing and storing the cluster's configurationand data.
+
+Each node in a cluster runs two processes:
+- Kublet:Handles requests to the containers, manages resources and looks after the local nodes
+- Kube-proxy:creates and manages networking rules and it is responsible for managing the network connectivity to containers.
+
+### Additional Security Measures In A Cluster
+- Namespaces
+- Contexts
+- Resource Limits
+- Pod Security Policies
+- Network Policies
