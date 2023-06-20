@@ -65,3 +65,27 @@ Each pod has:
 - Persistent storage volumes (PSV)
 - Configuration informan=tion for how a container should run
 
+## Basic KubeCTL Commands
+- View Cluster Information:
+`kubectl cluster-info`
+- View Resources:
+`kubectl get <resource>`: List resources of a specific type, e.g., kubectl get pods, kubectl get nodes, kubectl get deployments.
+`kubectl describe <resource> <name>`: Show detailed information about a specific resource, e.g., kubectl describe pod my-pod.
+- Create and Apply Resources:
+`kubectl create`: Create a resource from a file or by specifying details directly, e.g., kubectl create -f pod.yaml.
+`kubectl apply`: Create or update a resource from a file or by specifying details directly, e.g., kubectl apply -f deployment.yaml.
+- Delete Resources:
+`kubectl delete <resource> <name>`: Delete a specific resource, e.g., kubectl delete pod my-pod.
+`kubectl delete -f <file>`: Delete resources defined in a file, e.g., kubectl delete -f deployment.yaml.
+- Get Cluster Components:
+`kubectl get componentstatuses`: List the health status of the cluster's components (e.g., scheduler, controller-manager).
+`kubectl get nodes`: List all nodes in the cluster.
+- Pod Operations:
+`kubectl logs <pod>`: Print the logs of a specific pod, e.g., kubectl logs my-pod.
+`kubectl exec -it <pod> -- <command>`: Run a command inside a pod interactively, e.g., kubectl exec -it my-pod -- /bin/bash.
+- Scale Deployments:
+`kubectl scale deployment <deployment> --replicas=<count>`: Scale the number of replicas in a deployment, e.g., kubectl scale deployment my-deployment --replicas=3.
+- Port Forwarding:
+`kubectl port-forward <pod> <local-port>:<remote-port>`: Forward a local port to a port on a pod, e.g., kubectl port-forward my-pod 8080:80.
+- Get API Resources:
+`kubectl api-resources`: List all the supported API resources.
