@@ -30,7 +30,9 @@ count = var.environment == "prod" ? 1:0
 ----
 EC2
 ----
-Imagine we have to create 50 ports on a security group, we could use dynamic blocks instead on ingress, egress blocks.
-We create a list of the ports we want open and it takes care of them for us 
+- Imagine we have to create 50 ports on a security group, we could use dynamic blocks instead on ingress, egress blocks.
+  We create a list of the ports we want open and it takes care of them for us 
 
-Dynamic blocks is a fast way of setting up security groups if we have multiple groups
+- Dynamic blocks is a fast way of setting up security groups if we have multiple groups
+
+- Elastic IPs remain the same4 after redeploying unlike public IPs
