@@ -1,0 +1,28 @@
+TERRAFORM
+
+--------------
+TERRAFORM 101
+--------------
+
+resource “aws_vpc” “my_vpc” {
+	cidr_block = “10.0.0.0/12”
+} 
+
+aws_vpc: type of the resource
+my_vpc: name we are giving the resource within terraform
+
+Difference between list and tupleIn a list we can only specify one data type, in a tupule we can have multiple data types
+Tuple is similar to list
+Object is similar to Map
+ 
+Tfswitch allows you to easily switch between versions of terraform
+
+--------------------------
+TERRAFORMM VERSION CHANGE
+--------------------------
+
+Example of using count
+To for example decide wether to deploy something to prod or test environment
+count = var.environment == "prod" ? 1:0
+
+-var-file for targeting a filr when running terraform commands
