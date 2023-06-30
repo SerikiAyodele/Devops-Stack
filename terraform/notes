@@ -36,3 +36,17 @@ EC2
 - Dynamic blocks is a fast way of setting up security groups if we have multiple groups
 
 - Elastic IPs remain the same4 after redeploying unlike public IPs
+
+
+-----------
+OTHER NOTES
+-----------
+- A local is only accessible within the local module, a terraform variable is       globally scoped
+
+- Data sources allow terraform to use information defined outside of terraform, defined by another seperate terraform configuration
+
+- <cidr_blocks = [for s in data.aws_subnet.redshift_ingress : s.cidr_block]> - uses
+ a list comprehension to extract the CIDR blocks from  'data.aws_subnet.redshift_ingress' 
+ data source and assign them to the 'cidr_blocks' variable
+
+- 
