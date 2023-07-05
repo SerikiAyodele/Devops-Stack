@@ -3,7 +3,6 @@ TERRAFORM
 --------------
 TERRAFORM 101
 --------------
-
 resource “aws_vpc” “my_vpc” {
 	cidr_block = “10.0.0.0/12”
 } 
@@ -17,15 +16,16 @@ Object is similar to Map
  
 Tfswitch allows you to easily switch between versions of terraform
 
+
 --------------------------
 TERRAFORMM VERSION CHANGE
 --------------------------
-
 Example of using count
 To for example decide wether to deploy something to prod or test environment
 count = var.environment == "prod" ? 1:0
 
 -var-file for targeting a filr when running terraform commands
+
 
 ----
 EC2
@@ -36,6 +36,13 @@ EC2
 - Dynamic blocks is a fast way of setting up security groups if we have multiple groups
 
 - Elastic IPs remain the same4 after redeploying unlike public IPs
+
+
+--------
+MODULES
+--------
+- To access any atribute or value for anything we've created inside a module we have
+  to create an output
 
 
 -----------
@@ -49,4 +56,3 @@ OTHER NOTES
  a list comprehension to extract the CIDR blocks from  'data.aws_subnet.redshift_ingress' 
  data source and assign them to the 'cidr_blocks' variable
 
-- 
