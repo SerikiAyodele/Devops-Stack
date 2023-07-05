@@ -46,17 +46,3 @@ COMMITS
   * .DS_Store: will ignore files named .DS_Store
     folderName/: will ignore an entire directory
     *.log: will ignore any files with the .log extension
-
-
-
-
-
-
-
-
-
-
-
-
-
-
