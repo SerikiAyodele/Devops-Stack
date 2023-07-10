@@ -82,6 +82,9 @@ resource "aws_iam_policy" "customPolicy" {
 EOF
 }
 
+
+
+
 resource "aws_iam_policy_attachment" "policyBind" {
     name = "attachment"
     users = [aws_iam_user.aUser.name]
