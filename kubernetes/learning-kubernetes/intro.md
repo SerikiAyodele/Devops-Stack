@@ -10,3 +10,5 @@ Orchestration tools such as Kubernetes offer:
 - container runtime e.g docker
 - kubelet
 - kube proxy: for communication between the nodes and pods
+
+Concepts
