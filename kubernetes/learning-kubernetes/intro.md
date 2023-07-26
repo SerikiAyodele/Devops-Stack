@@ -12,3 +12,7 @@ Orchestration tools such as Kubernetes offer:
 - kube proxy: for communication between the nodes and pods
 
 Concepts
+- Pods are an abstraction layer over containers and they are the smallest
+    unit that a kubernetes user can configure
+
+    
