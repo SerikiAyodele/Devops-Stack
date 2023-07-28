@@ -46,3 +46,22 @@ Each node in a cluster runs two processes:
 - Resource Limits
 - Pod Security Policies
 - Network Policies
+
+## Kubernetes Pods
+- Pods represent a process running in a cluster, it is the smallest unit in a kubernetes cluster. We can have more than one 
+  container in a pod, and each container will share the ip address, storage and namespace, each container will normally have
+  their own role inside the pod.
+- Because containers are ran in parallel, it's hard to tell which started before which, hence we have **initContainers**
+  which are used to make sure some containers are ready before others in a pod.
+- An example of running multiple containers withing a pod is an app server, were we can have three containers, one in the 
+  app server itself, another is a logging adapter and the other a monitoring adapter, in this case the three containers 
+  conbined will be providing the same service.
+- Replicated pods are created and managed by a controller, such as a deployment.
+- All pods in a container are connceted.
+- A limit is the maximum amount of CPU or memory that kubernetes grants to a pod.
+
+Each pod has:
+- A unique IP address through which they communicate with each other
+- Persistent storage volumes (PSV)
+- Configuration informan=tion for how a container should run
+
