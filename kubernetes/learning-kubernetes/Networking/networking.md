@@ -13,3 +13,4 @@
 
 ## Service Mesh
 - A service mesh is an infrastructure layer in your application that facilitate  communication between services
+- If one service fails, traffic has to be routed to another service, this is the essence of a service mesh 
