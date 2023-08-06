@@ -9,3 +9,4 @@
 - Nodeport allows access to the service from outside the Kubernetes cluster and within the cluster
 
 ## Kubernetes Ingress
+
