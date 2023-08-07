@@ -7,3 +7,5 @@
  - ClusterIP is the default and most common type of Service in Kubernetes.
  - It provides a stable, internal IP address (ClusterIP) that is only accessible from within the Kubernetes cluster.
 - Nodeport allows access to the service from outside the Kubernetes cluster and within the cluster
+
+## Kubernetes Ingress
