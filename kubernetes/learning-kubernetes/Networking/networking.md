@@ -9,4 +9,7 @@
 - Nodeport allows access to the service from outside the Kubernetes cluster and within the cluster
 
 ## Kubernetes Ingress
+- Ingress is responsible for managing external access to our clusters
 
+## Service Mesh
+- A service mesh is an infrastructure layer in your application that facilitate  communication between services
