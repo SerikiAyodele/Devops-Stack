@@ -10,10 +10,10 @@ common ports and their numbers
 | port number | service |
 | ----------- | ----------- |
 | HTTP | 80 |
-| HTTPS | 443 |
-| SSH | 22 |
-| DNS | 53 |
-|Telnet | 23 |
+| HTTPS| 443|
+| SSH  | 22 |
+| DNS  | 53 |
+|Telnet| 23 |
 
 #### TCP 
 - transmission user protocol is referred to as a connection oriented protocol
