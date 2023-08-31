@@ -28,3 +28,5 @@ DNS resolves an IP from a given FQDN. A DNS server can obtain records in one of 
 - Manual entry
 - Dynamic entry
 - Zone transfer
+
+## Performing dns Queries
