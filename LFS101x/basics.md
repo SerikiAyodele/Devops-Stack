@@ -1,4 +1,4 @@
-# CHAPTER 2- The Boot Process
+# The Boot Process
 The linux boot process is the procedure for initializing the system, it consists of everything that happens from when the computer power is first switched on, until the UI is fully operational.
 
 ![boot-process](img/boot-process.drawio.png)
@@ -9,17 +9,15 @@ and tests the main memory. The BIOS software is stored on a read-only memory (RO
 Boot Loader- After the POST is completed, system control passes from the BIOS to the bootloader. When booting linux the boot loader is responsible for loading the kernel image and the initial RAM disk or filesystem(which contains some critical files and device drivers needed to start the system) into memory.
 
 -------
-# CHAPTER 3- 
-
-## Kernel, init, services
+# Kernel, init, services
 The boot loader loads both the kernel and an initial RAM–based file system (initramfs) into memory, so it can be used directly by the kernel.
 
-#### /sbin/init and Services
+## /sbin/init and Services
 Once the kernel has set up all its hardware and mounted the root filesystem, the kernel runs `/sbin/init`. This then becomes the initial process, which then starts other processes to get the system running. Besides starting the system, init is responsible for keeping the system running and for shutting it down cleanly.
 
 This process startup is done using systemd, a system and service manager for Linux operating systems. It plays a crucial role in how a Linux system starts up, manages services, and handles various tasks. /sbin/init points to /lib/systemd/systemd; i.e. systemd takes over the init process.
 
-## Linux Filesystem Basics
+# Linux Filesystem Basics
 --------
 # Different unit of measurement for data and storage
 
