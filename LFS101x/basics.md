@@ -1,6 +1,68 @@
-# The Boot Process
-The linux boot process is the procedure for initializing the system, it consists of everything that happens
-from when the computer power is first switched on, until the UI is fully operational.
+# CHAPTER 2- The Boot Process
+The linux boot process is the procedure for initializing the system, it consists of everything that happens from when the computer power is first switched on, until the UI is fully operational.
+
+![boot-process](img/boot-process.drawio.png)
 
 BIOS- When the computer is powered on the Basic Input/Output System (BIOS) initializes the hardware, including the screen and keyboard
-and tests the main memory. The BIOS software is stored on a read-only memory (ROM) chip on the motherboard
+and tests the main memory. The BIOS software is stored on a read-only memory (ROM) chip on the motherboard. This process is also called POST(power on self test)
+
+Boot Loader- After the POST is completed, system control passes from the BIOS to the bootloader. When booting linux the boot loader is responsible for loading the kernel image and the initial RAM disk or filesystem(which contains some critical files and device drivers needed to start the system) into memory.
+
+-------
+# CHAPTER 3- 
+
+## Kernel, init, services
+The boot loader loads both the kernel and an initial RAM–based file system (initramfs) into memory, so it can be used directly by the kernel.
+
+#### /sbin/init and Services
+Once the kernel has set up all its hardware and mounted the root filesystem, the kernel runs `/sbin/init`. This then becomes the initial process, which then starts other processes to get the system running. Besides starting the system, init is responsible for keeping the system running and for shutting it down cleanly.
+
+This process startup is done using systemd, a system and service manager for Linux operating systems. It plays a crucial role in how a Linux system starts up, manages services, and handles various tasks. /sbin/init points to /lib/systemd/systemd; i.e. systemd takes over the init process.
+
+## Linux Filesystem Basics
+--------
+# Different unit of measurement for data and storage
+
+Certainly! Understanding different units of measurement for data and storage is important in computing and technology. Here are some of the common units of measurement and their relationships:
+
+1. Bit (b):
+A bit is the smallest unit of data in computing.
+It can represent either a 0 or a 1.
+It's the basic building block of all digital information.
+
+2. Byte (B):
+A byte is composed of 8 bits.
+It's the fundamental unit for storing and representing data in most computer systems.
+Often used to measure file sizes and memory capacity.
+
+3. Kilobyte (KB):
+1 kilobyte is equal to 1,024 bytes (not 1,000).
+Often used to represent small amounts of data or file sizes.
+
+4. Megabyte (MB):
+1 megabyte is equal to 1,024 kilobytes or 1,048,576 bytes.
+Commonly used for larger files, such as documents, images, and songs.
+
+5. Gigabyte (GB):
+1 gigabyte is equal to 1,024 megabytes or 1,073,741,824 bytes.
+Used for measuring storage capacities of hard drives, SSDs, and large files.
+
+6. Terabyte (TB):
+1 terabyte is equal to 1,024 gigabytes or 1,099,511,627,776 bytes.
+Common for modern hard drives, SSDs, and data storage.
+
+7. Petabyte (PB):
+1 petabyte is equal to 1,024 terabytes or 1,125,899,906,842,624 bytes.
+Used for measuring storage capacities in large data centers and cloud storage.
+
+8. Exabyte (EB):
+1 exabyte is equal to 1,024 petabytes or 1,152,921,504,606,846,976 bytes.
+Used for measuring very large data storage and internet traffic.
+
+9. Zettabyte (ZB):
+1 zettabyte is equal to 1,024 exabytes or 1,180,591,620,717,411,303,424 bytes.
+Typically used for measuring global data storage and internet traffic.
+
+10. Yottabyte (YB):
+1 yottabyte is equal to 1,024 zettabytes or 1,208,925,819,614,629,174,706,176 bytes.
+It's a theoretical unit used to describe incredibly large data quantities.
