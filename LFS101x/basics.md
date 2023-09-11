@@ -17,7 +17,13 @@ Once the kernel has set up all its hardware and mounted the root filesystem, the
 
 This process startup is done using systemd, a system and service manager for Linux operating systems. It plays a crucial role in how a Linux system starts up, manages services, and handles various tasks. /sbin/init points to /lib/systemd/systemd; i.e. systemd takes over the init process.
 
+---------
 # Linux Filesystem Basics
+Linux filesystem is a method of storing and organizing arbitrary collections of data in human-useable form.
+
+## Partitions and filesystems
+A partition is a  dedicated subsection of physical storage media, a filesystem is just a method of storing and accessing files.
+
 --------
 # Different unit of measurement for data and storage
 
