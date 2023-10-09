@@ -1,14 +1,14 @@
 package main
 import (
 	"fmt"
-	// "strings"
+	"strings"
 )
 
 func main(){
 	conferenceName := "Go conference"
-
-	const conferenceTickets = 50
+	const conferenceTickets int = 50
 	var remainingTickets uint = 50
+	bookings := []string{}
 
 	fmt.Printf("Welcome to %v booking application\n", conferenceName)
 	fmt.Printf("We have a total of %v tickets and %v are still available.\n", conferenceTickets, remainingTickets) 
@@ -32,26 +32,31 @@ func main(){
 		fmt.Println("enter number of tickets:")
 		fmt.Scan(&userTickets)
 
+		if userTickets <= remainingTickets {
+			remainingTickets = remainingTickets - userTickets
+			bookings = append(bookings, firstName + " " + lastName)
 
-		var bookings []string
+			fmt.Printf("Thank you %v %v for booking %v tickets. you will receive confirmation at %v\n", firstName, lastName, userTickets, email)
+			fmt.Printf("%v tickets remain for %v\n", remainingTickets, conferenceName)
 
+			fmt.Printf("The whole array: %v\n", bookings)
+			fmt.Printf("The first value: %v\n", bookings[0])
 
-		remainingTickets = remainingTickets - userTickets
-		bookings = append(bookings, firstName + " " + lastName)
+			firstNames := []string{}
+			for _, booking := range bookings {
+				var names = strings.Fields(booking)
+				firstNames = append(firstNames, names[0])
+			}
+			fmt.Printf("The first names of bookings are: %v\n", firstNames)
 
-		fmt.Printf("The whole array: %v\n", bookings)
-		fmt.Printf("The first value: %v\n", bookings[0])
+			if remainingTickets == 0 {
+				fmt.Println("Booked out")
+				break
+			}
+		}
 
-		fmt.Printf("Thank you %v %v for booking %v tickets. you will receive confirmation at %v\n", firstName, lastName, userTickets, email)
-		fmt.Printf("%v tickets remain for %v\n", remainingTickets, conferenceName)
-
-		// firstNames := []string{}
-		// for index, booking := range bookings {
-		// 	var names = strings.Fields(booking)
-		// 	var firstName = names[0]
-		// 	firstNames = append(firstNma)
-		// }
-		fmt.Printf("These are all our bookings: %v\n", bookings)
+		fmt.Printf("Max no of tickets you can book is %v, please try again\n", remainingTickets)
+		continue
 	}
 
 }
