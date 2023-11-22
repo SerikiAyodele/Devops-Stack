@@ -1,0 +1,2 @@
+Terms:
+dummy node: helps to simplify edge cases.ithout a dummy node, you would need to check whether the list is empty before every insertion or deletion operation. The dummy node ensures that there is always at least one node in the list.
