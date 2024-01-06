@@ -1,4 +1,4 @@
 - Hashmap and hashtable are the same
 - Dictionary is a python specific implementation of hashtables
 - Lookup by key is O(1) on average, insertion/deletion is also O(1) on average
-- 
+- useful when you need to count the number of occurences in a string 
