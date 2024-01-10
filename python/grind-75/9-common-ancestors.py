@@ -1,5 +1,5 @@
 def commonAncestors(root, p, q):
-    curr= root
+    curr = root
 
     while curr:
         if p.val > curr.val and q.val > curr.val:
