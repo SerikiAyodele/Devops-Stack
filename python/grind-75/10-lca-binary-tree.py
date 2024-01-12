@@ -6,9 +6,9 @@ class Solution(object):
         while root:
             if root.left < p.val and root.right > q.val:
                  root.val
-            elif root.left > p.val:
+            elif root.left > p.val and root.left > q.val:
                  root.right.val
-            elif root.right < q.val:
+            elif root.right < q.val and root.left > q.val:
                  root.left.val
             else:
                 break
