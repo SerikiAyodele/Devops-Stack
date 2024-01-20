@@ -5,3 +5,5 @@ CREATE TABLE mia (
     password TEXT,
     age INT
 );
+
+SELECT * FROM "user" WHERE name= 'Troy' -- * means all columns
