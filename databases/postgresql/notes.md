@@ -8,3 +8,4 @@
 - Double quotes are for referncing column and tables
 - Single quotes are for texts
 - SELECT is a keyword that allows us to get information from existing tables
+- WHERE keyword can be used to give a condition
