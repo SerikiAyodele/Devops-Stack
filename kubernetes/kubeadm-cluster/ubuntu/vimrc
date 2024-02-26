@@ -3,4 +3,27 @@ set ts=2
 set sw=2
 set et
 set ai
-set pastetoggle=<F3>
+set pastetog
+
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+Alternatively, if you are the root user, you can run:
+
+  export KUBECONFIG=/etc/kubernetes/admin.conf
+
+You should now deploy a pod network to the cluster.
+Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+  https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
+Then you can join any number of worker nodes by running the following on each as root:
+
+sudo kubeadm join 192.168.56.11:6443 --token kht4re.5yut1xatptffli4x \
+        --discovery-token-ca-cert-hash sha256:9025becfa06e01d1d7fb0f1fe25357a753dfa8bb068907d8c2e18e244474e86f 
+vagrant@kubemaster:~$   mkdir -p $HOME/.kube
+
+
+sudo apt-get update
+sudo apt-get install -y kubelet=1.27.0-2.1 kubeadm=1.27.0-2.1 kubectl
+sudo apt-mark hold kubelet=1.27.0-2.1 kubeadm=1.27.0-2.1 kubectl
