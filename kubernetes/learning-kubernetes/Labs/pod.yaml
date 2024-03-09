@@ -1,0 +1,29 @@
+# LAB
+# Create a pod called secret-1401 in the admin1401 namespace using the busybox image. 
+# The container within the pod should be called secret-admin and should sleep for 4800 seconds.
+# The container should mount a read-only secret volume called secret-volume at the path /etc/secret-volume.
+# The secret being mounted has already been created for you and is called dotfile-secret. 
+
+
+# HOW-TO
+# To create the pod imperatively
+# kubectl run secret-1401 --image=busybox -n admin1401 --command -- sleep 4800 
+# After creating the pod, edit as follows
+
+# YAML FILE
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis
+spec:
+  containers:
+  - name: redis
+    image: redis
+    volumeMounts:
+    - name: secret-volume
+      readOnly: true
+      mountPath: /etc/secret-volume
+  volumes:
+  - name: secret-volume
+    secret:
+      secretName: dotfile-secret
