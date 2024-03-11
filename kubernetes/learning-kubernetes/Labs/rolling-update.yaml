@@ -1,0 +1,35 @@
+# Create a new deployment called nginx-deploy, with image nginx:1.16 and 1 replica. 
+# Next upgrade the deployment to version 1.17 using rolling update.
+
+
+# initial deployment 
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: nginx-deploy
+ labels:
+   app: nginx
+spec:
+ replicas: 1
+ selector:
+   matchLabels:
+     app: nginx
+ template:
+   metadata:
+     labels:
+       app: nginx
+   spec:
+     containers:
+     - name: nginx
+       image: nginx:1.16
+       ports:
+       - containerPort: 80
+ strategy:
+   type: RollingUpdate
+   rollingUpdate:
+     maxSurge: 1
+     maxUnavailable: 1
+
+# Upgrading the deployent from 1.16 to 1.17 will look like
+spec.containers.image: nginx:1.17
+# and applying the change
