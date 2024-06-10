@@ -1,17 +1,18 @@
-def encode(strs):
-    res = ""
-    for s in strs:
-        res = str(len(strs)) + "$" + s
-    return res
+class Codec:
+    def encode(strs):
+        newStr = ""
+        for i in strs:
+            newStr += str(len(i)) + "$" + i
+        return newStr
+    
+    def decode(str):
+        newList, i = [], 0
 
-def decode(str):
-    res, i = [], 0
-
-    while i < len(str):
-        j = i
-        while str[j] != "$":
-            j += 1
-        length =int(str[i:j])
-        res.append(str[j+1:j+1+length])
-        i = j+1+length
-    return res
+        while i<len(str):
+            j = i
+            if j != "$":
+                j += 1
+            length = int(str[i:j])
+            newList.append(str[j + 1 : j + 1 + length])
+            i = j + 1 + length
+        return newList
