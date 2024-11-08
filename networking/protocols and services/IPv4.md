@@ -29,8 +29,7 @@ When planning your network, you're going to use one of the following addressing:
 - Classless networks do not have boundaries of predefined network element.
 
 ## Understanding subnet masks
-A subnet is a smaller network within a larger network, a subnet mask tells which which part of an IP 
-address is anetwork element and which part is a host element
+- A subnet is a smaller network within a larger network, a subnet mask tells which which part of an IP address is a network element and which part is a host element
 - To know if the source and destination Ip addresses are on the same network, their subnet values should be the same 
 
 ## CIDR
